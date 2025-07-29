@@ -29,7 +29,7 @@ async def send_vid(bot: Client, m: Message, cc, filename, thumb, name, prog):
         return
 
     watermarked_filename = f"watermarked_{filename}"
-    watermark_text = "SAINI BOTS"
+    watermark_text = "⍣⃝R"
     subprocess.run(
         f'ffmpeg -i "{filename}" -vf "drawtext=text='{watermark_text}':fontcolor=black@0.2:fontsize=24:x=(w-text_w)/2:y=(h-text_h)/2" -codec:a copy "{watermarked_filename}"',
         shell=True
